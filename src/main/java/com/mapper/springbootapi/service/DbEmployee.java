@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class DbEmployee {
@@ -16,6 +17,7 @@ public class DbEmployee {
     public DbEmployee(EmployeeRepository repository) {
         this.repository = repository;
     }
+
 
     public List<Employee> getAllEmployees() {
         return repository.findAll();
@@ -29,7 +31,11 @@ public class DbEmployee {
         }
     }
 
-    public Employee seveEmpolyee(final Employee employee) {
+    public Employee saveEmployee(final Employee employee) {
         return repository.save(employee);
+    }
+
+    public Optional<Employee> getEmployeeById(final Long id) {
+        return repository.findById(id);
     }
 }
