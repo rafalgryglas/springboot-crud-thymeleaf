@@ -29,7 +29,7 @@ public class EmployeeServiceTestSuite {
     public void getAllEmployeeTest(){
         //Given
         List<Employee> employees = new ArrayList<>();
-        employees.add(new Employee(5L,"Raf", "Gryg", 8812169845L,"raf@rag.com"));
+        employees.add(new Employee(5L,"Rafa", "Gryg", 8812169845L,"raf@rag.com"));
         employees.add(new Employee(6L,"Rafas", "Grygss", 881216985L,"raf@ag.com"));
         when(employeeRepository.findAll()).thenReturn(employees);
         //When
