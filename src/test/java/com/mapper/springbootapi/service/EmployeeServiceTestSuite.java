@@ -50,7 +50,7 @@ public class EmployeeServiceTestSuite {
     @Test
     public void saveEmployeeTest() {
         //Given
-        Employee employee = new Employee(5L,"Rafa", "Gryglas", 8812169845L,"raf@rag.com");
+        Employee employee = new Employee(5L,"Rafa", "Grygla", 8812169845L,"raf@rag.com");
         when(employeeRepository.save(employee)).thenReturn(employee);
         //When
         Employee resultEmployee = dbEmployee.saveEmployee(employee);
