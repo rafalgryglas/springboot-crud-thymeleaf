@@ -19,7 +19,7 @@ public class EmployeeRepositoryTest {
     @Test
     public void employeeRepositoryTest() {
         //Given
-        Employee employee = new Employee(5L,"Raf", "Gryg", 8812169845L,"raf@rag.com");
+        Employee employee = new Employee(5L,"Ra", "Gryg", 8812169845L,"raf@rag.com");
         //When
         employeeRepository.save(employee);
         Long id = employee.getId();

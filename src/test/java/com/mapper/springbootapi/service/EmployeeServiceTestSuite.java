@@ -40,7 +40,7 @@ public class EmployeeServiceTestSuite {
     @Test
     public void getEmployeeByIdTest() {
         //Given
-        Employee employee = new Employee(5L,"Rafal", "Gryglas", 8812169845L,"raf@rag.com");
+        Employee employee = new Employee(5L,"Rafa", "Gryglas", 8812169845L,"raf@rag.com");
         when(employeeRepository.findById(5L)).thenReturn(Optional.of(employee));
         //When
         Optional<Employee> result = dbEmployee.getEmployeeById(5L);
@@ -50,7 +50,7 @@ public class EmployeeServiceTestSuite {
     @Test
     public void saveEmployeeTest() {
         //Given
-        Employee employee = new Employee(5L,"Rafa", "Grygla", 8812169845L,"raf@rag.com");
+        Employee employee = new Employee(5L,"Raf", "Grygla", 8812169845L,"raf@rag.com");
         when(employeeRepository.save(employee)).thenReturn(employee);
         //When
         Employee resultEmployee = dbEmployee.saveEmployee(employee);
