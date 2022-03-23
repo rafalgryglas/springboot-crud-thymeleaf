@@ -10,7 +10,7 @@
 </head>
 <body>
 <div align="center">
-    <h2>Employees:</h2>
+    <h2>Employees for user:</h2>
     <table class="container table table-striped table-responsive">
         <thead>
         <tr>
@@ -18,26 +18,28 @@
             <th>Id</th>
             <th>Name</th>
             <th>Last name</th>
-            <th>PESEL</th>
             <th>Email</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="employee : ${employeesList}" }>
-            <td><a th:href="@{update/{id}(id=${employee.id})}" class="btn btn-primary">EDIT</a></td>
+            <td><a th:href="@{/update/{id}(id=${employee.id})}" class="btn btn-primary disabled">EDIT</a></td>
             <td th:text="${employee.getId()}"></td>
             <td th:text="${employee.getFirstName()}"></td>
             <td th:text="${employee.getLastName()}"></td>
-            <td th:text="${employee.getPesel()}"></td>
             <td th:text="${employee.getEmail()}"></td>
-            <td><a th:href="@{/delete/{id}(id=${employee.id})}" class="btn btn-danger"><i class="bi bi-person-x"
-                                                                                          style="font-size: 1rem"></i></a>
+            <td><a th:href="@{/delete/{id}(id=${employee.id})}" class="btn btn-danger disabled"><i
+                    class="bi bi-person-x"
+                    style="font-size: 1rem"></i></a>
             </td>
         </tr>
         </tbody>
     </table>
     <div class="container">
-        <a th:href="@{/add-employee}"><i class="bi bi-person-plus" style="font-size: 4rem"></i></a>
+        <a th:href="@{/}" class="btn bi bi-person-plus disabled" style="font-size: 4rem"></a>
+    </div>
+    <div class="container">
+        <p>If you have ADMIN authorization: </p><a th:href="@{/}" class="btn btn-link"> CLICK HERE </a>
     </div>
 </div>
 </body>

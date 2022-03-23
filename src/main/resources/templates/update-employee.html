@@ -5,19 +5,17 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <head>
     <meta charset="UTF-8">
-    <title>Update employee</title>
+    <title>Update employe</title>
 </head>
 <body>
 <div align="center">
     <h1>Update employee</h1>
     <form action="#" th:action="@{/save}" th:object="${employee}" method="POST">
-
         <input type="hidden" th:field="*{id}">
         <input type="text" th:field="*{firstName}">
         <input type="text" th:field="*{lastName}">
         <input type="text" th:field="*{pesel}">
         <input type="text" th:field="*{email}">
-
         <button type="submit" class="btn btn-primary"> Save</button>
     </form>
 </div>
